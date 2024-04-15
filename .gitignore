@@ -1,0 +1,119 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+#
+# This file is tailored for a WordPress project
+# using the default directory structure
+#
+# This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# -----------------------------------------------------------------
+
+# ignore all files starting with .
+.*
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+!build/.gitkeep
+
+# track the build folder (i.e. do NOT ignore it)
+build/*
+!build/.gitkeep
+
+# track README.md in the root (i.e. do NOT ignore it)
+!README.md
+!README-Docker.md
+
+# track .htaccess in the root (i.e. do NOT ignore it)
+!.htaccess
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+# (.DS_Store is already ignore by ignoring everything starting with a .)
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins" directory
+# "plugins" directory
+# "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# ignore these plugins
+wp-content/plugins/hello.php
+wp-content/plugins/akismet/
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node/grunt dependency directories
+node_modules/
+wp-content/themes/*/dist/
+
+# Ignore theme specific generated scripts and styles
+wp-content/themes/*/*.css
+wp-content/themes/*/*.css.map
+wp-content/themes/*/js/scripts.bundled.js
+wp-content/themes/*/js/scripts.bundled.js.map
+
+# ignore theme specific configs
+wp-content/themes/*/aws.json
+wp-content/themes/*/ssl.json
+wp-content/plugins/force-regenerate-thumbnails
+package-lock.json
+
+# include db backup
+!wp-db-dump/.gitkeep
+!wp-db-dump/README.md
+# exclude all other files in wp-db-dump
+wp-db-dump/*
+
+# includes develop specific config files
+!example.env
+!docker-compose.yml
+!package.json
+!.babelrc
+!/build/.gitkeep
