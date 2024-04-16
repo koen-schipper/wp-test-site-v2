@@ -1,11 +1,12 @@
 {
-    "name": "koenschipper/wordpress-starter-kit",
+    "name": "koenschipper/wp-starter-kit",
     "version": "1.0.0",
     "license": "MIT",
     "scripts": {
         "start": "docker-compose up -d",
         "start:dev": "docker-compose up -d && npm run dev",
         "stop": "docker-compose down",
+        "wp": "docker exec -it $(docker ps -qf \"name=wordpress\") wp $* --allow-root"
     },
     "dependencies": {}
 }
