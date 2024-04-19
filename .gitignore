@@ -117,3 +117,5 @@ wp-db-dump/*
 !package.json
 !.babelrc
 !/build/.gitkeep
+
+dbdata/*
