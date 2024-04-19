@@ -118,4 +118,3 @@ wp-db-dump/*
 !.babelrc
 !/build/.gitkeep
 
-dbdata/*
