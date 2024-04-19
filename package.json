@@ -6,7 +6,8 @@
         "start": "docker-compose up -d",
         "start:dev": "docker-compose up -d && npm run dev",
         "stop": "docker-compose down",
-        "wp": "docker exec -it $(docker ps -qf \"name=wordpress\") wp $* --allow-root"
+        "wp": "docker exec -it $(docker ps -qf \"name=wordpress\") wp $* --allow-root",
+        "setup": "ssh "
     },
     "dependencies": {}
 }
