@@ -1,6 +1,6 @@
 {
     "name": "koenschipper/wp-starter-kit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "scripts": {
         "start": "docker-compose up -d",
